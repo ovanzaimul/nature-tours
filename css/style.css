@@ -57,12 +57,16 @@ body{
   left: 50%;
   /* background-color: red; */
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary{
   color: #fff;
   text-transform: uppercase;
+  
   backface-visibility: hidden;
+  
+  margin-bottom: 60px;
 }
 
 .heading-primary-main{
@@ -105,22 +109,95 @@ body{
   }
   100%{
     opacity: 1;
-    transform: translateX(0);
+    transform: translate(0);
   }
 }
 
 @keyframes moveInRight{
   0%{
     opacity: 0;
-    transform: translateX(100px) rotate(0);
-  }
+    transform: translateX(100px);
+  } 
   80%{
     transform: translateX(-10px);
   }
   100%{
     opacity: 1;
-    transform: translateX(0) ;
+    transform: translate(0);
     /* color: #ff0000;  */
     /* the color red doesn't stays, its gone after the animation finishes(animation-duration) */
   }
+}
+
+@keyframes moveInBottom{
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+    /* color: #ff0000;  */
+    /* the color red doesn't stays, its gone after the animation finishes(animation-duration) */
+  }
+}
+
+.btn:link,
+.btn:visited{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px; /*this will shape the edge, and we can put a really high number it will stay the same like 200px or even 500px*/
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active{
+  transform: translateY(-1px); /*this "-1px" is related to the initial state(.btn:link) not the :hover. so "-1px" from the normal position*/
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  /* when it's active, we want the shadow to look smaller and so to give the impression that the button is closer to the page and so further away from the user.===> we decrease the x shadow to 5px and we want it less blured ===> we wanna make it look natural */
+}
+
+.btn-white{
+  background-color: #fff;
+  color: #777;
+}
+
+.btn::after{
+  /*we want it to look the same as the button */
+  content:"";
+  display: inline-block; /* because the button that we have is an inline-block */
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  transition: all .4s;
+  /* we put the transition here because this is the initial state of ".btn:hover::after" */
+}
+
+.btn-white::after{
+  content: "";
+  background-color: #fff;
+  /* background-color: red;  */
+  /* Now it's everything red But that's not a problem For some reason the original button is also getting red, But we still can be sure the pseudo-element is behind the button because we still can see the text, And so that means that the original button is still on top of the pseudo-element.*/
+}
+
+.btn:hover::after{
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated{
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
 }
