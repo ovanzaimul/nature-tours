@@ -13,14 +13,19 @@ Dark green: #28b485
   box-sizing: border-box;
 }
 
+html{
+  font-size: 10px;
+}
+
 body{
   /* overall setting. will inherited by all the child element of the body */
   font-family: "lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7; /*means that it's 1.7 times bigger than the predefined line height, that we would have without this. */
   color: #777;
-  padding: 30px; /*this is not inheritance bcs padding not getting inherited*/
+  padding: 3em; /*this is not inheritance bcs padding not getting inherited*/
+  
 }
 
 .header{
@@ -38,13 +43,16 @@ body{
 
 .logo-box{
   position: absolute;
-  top: 40px;
-  left: 40px;
+  /* top: 40px;
+  left: 40px; */
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo{
-  height: 35px; /*we don't have to specify the widht, the width with scale accordingly(the width automatically figured out by the browser) */
+ /* height: 35px; */ /*we don't have to specify the widht, the width with scale accordingly(the width automatically figured out by the browser) */
   /* We could instead also set the width and then the height would be figured out by the browser. */
+  height: 3.5em;
 }
 
 /* .logo:hover{
@@ -66,14 +74,17 @@ body{
   
   backface-visibility: hidden;
   
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main{
   display: block;
-  font-size: 60px;
+  /* font-size: 60px; */
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  /* letter-spacing: 35px; */
+  letter-spacing: 3.4rem;
 
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -89,9 +100,11 @@ body{
 
 .heading-primary-sub{
   display: block;
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
+  /* letter-spacing: 17.4px; */
+  letter-spacing: 1.75rem;
 
   /* animation-name: moveInRight;
   animation-duration: 1s;
@@ -102,10 +115,12 @@ body{
 @keyframes moveInLeft{
   0%{
     opacity: 0;
-    transform: translateX(-100px);
+    /* transform: translateX(-100px); */
+    transform: translateX(-10rem);
   }
   80%{
-    transform: translateX(10px);
+    /* transform: translateX(10px); */
+    transform: translateX(1rem);
   }
   100%{
     opacity: 1;
@@ -116,10 +131,12 @@ body{
 @keyframes moveInRight{
   0%{
     opacity: 0;
-    transform: translateX(100px);
+    /* transform: translateX(100px); */
+    transform: translateX(10rem);
   } 
   80%{
-    transform: translateX(-10px);
+    /* transform: translateX(-10px); */
+    transform: translateX(-1rem);
   }
   100%{
     opacity: 1;
@@ -132,7 +149,8 @@ body{
 @keyframes moveInBottom{
   0%{
     opacity: 0;
-    transform: translateY(30px);
+    /* transform: translateY(30px); */
+    transform: translateY(3em);
   }
   100%{
     opacity: 1;
@@ -146,21 +164,27 @@ body{
 .btn:visited{
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  /* padding: 15px 40px; */
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px; /*this will shape the edge, and we can put a really high number it will stay the same like 200px or even 500px*/
+  /*border-radius: 100px;*/ /*this will shape the edge, and we can put a really high number it will stay the same like 200px or even 500px*/
+  border-radius: 10rem;
   transition: all .2s;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* transform: translateY(-3px); */
+  transform: translateY(-.3em);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active{
-  transform: translateY(-1px); /*this "-1px" is related to the initial state(.btn:link) not the :hover. so "-1px" from the normal position*/
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  /*transform: translateY(-1px);*/ /*this "-1px" is related to the initial state(.btn:link) not the :hover. so "-1px" from the normal position*/
+  transform: translate(-.1rem);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
   /* when it's active, we want the shadow to look smaller and so to give the impression that the button is closer to the page and so further away from the user.===> we decrease the x shadow to 5px and we want it less blured ===> we wanna make it look natural */
 }
 
@@ -175,7 +199,8 @@ body{
   display: inline-block; /* because the button that we have is an inline-block */
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  /* border-radius: 100px; */
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
