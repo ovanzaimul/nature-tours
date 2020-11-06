@@ -7,10 +7,12 @@ Dark green: #28b485
 
 */
 
-*{
+*,
+*::after,
+*::before{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html{
@@ -26,6 +28,8 @@ body{
   line-height: 1.7; /*means that it's 1.7 times bigger than the predefined line height, that we would have without this. */
   color: #777;
   padding: 3em; /*this is not inheritance bcs padding not getting inherited*/
+
+  box-sizing: border-box;
   
 }
 
