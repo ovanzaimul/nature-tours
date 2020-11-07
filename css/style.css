@@ -46,7 +46,7 @@ body{
   position: relative;
 }
 
-.logo-box{
+.header__logo-box{
   position: absolute;
   /* top: 40px;
   left: 40px; */
@@ -54,7 +54,7 @@ body{
   left: 4rem;
 }
 
-.logo{
+.header__logo{
  /* height: 35px; */ /*we don't have to specify the widht, the width with scale accordingly(the width automatically figured out by the browser) */
   /* We could instead also set the width and then the height would be figured out by the browser. */
   height: 3.5em;
@@ -64,7 +64,7 @@ body{
   animation: moveInRight 1s ease-out;
 } */
 
-.text-box{
+.header__text-box{
   position: absolute;
   top: 40%; /* we use 40% so it looks more center, because the wedge(clip-path) make it look more down */
   left: 50%;
@@ -83,7 +83,7 @@ body{
   margin-bottom: 6rem;
 }
 
-.heading-primary-main{
+.heading-primary--main{
   display: block;
   /* font-size: 60px; */
   font-size: 6rem;
@@ -103,7 +103,7 @@ body{
 }
 /* two display block elements have no space between them */
 
-.heading-primary-sub{
+.heading-primary--sub{
   display: block;
   /* font-size: 20px; */
   font-size: 2rem;
@@ -193,7 +193,7 @@ body{
   /* when it's active, we want the shadow to look smaller and so to give the impression that the button is closer to the page and so further away from the user.===> we decrease the x shadow to 5px and we want it less blured ===> we wanna make it look natural */
 }
 
-.btn-white{
+.btn--white{
   background-color: #fff;
   color: #777;
 }
@@ -215,7 +215,7 @@ body{
   /* we put the transition here because this is the initial state of ".btn:hover::after" */
 }
 
-.btn-white::after{
+.btn--white::after{
   content: "";
   background-color: #fff;
   /* background-color: red;  */
