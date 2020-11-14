@@ -1,207 +1,170 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
 *,
 *::after,
-*::before{
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
-html{
+html {
   /* font-size: 10px; */
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
-body{
+body {
   /* overall setting. will inherited by all the child element of the body */
   font-family: "lato", sans-serif;
   font-weight: 400;
   /* font-size: 16px; */
-  line-height: 1.7; /*means that it's 1.7 times bigger than the predefined line height, that we would have without this. */
+  line-height: 1.7;
+  /*means that it's 1.7 times bigger than the predefined line height, that we would have without this. */
   color: #777;
-  padding: 3em; /*this is not inheritance bcs padding not getting inherited*/
+  padding: 3em;
+  /*this is not inheritance bcs padding not getting inherited*/
+  box-sizing: border-box; }
 
-  box-sizing: border-box;
-  
-}
-
-.header{
+.header {
   height: 95vh;
-  background-image: linear-gradient(
-    to right bottom,
-  rgba(126, 213, 111, 0.8),
-  rgba(40, 180, 133, 0.8)),
-    url("../img/hero.jpg");
-  background-size: cover; /* what cover does is that whatever the width of the viewport, or the element, it'll always try to fit the element inside of the box. */
-  background-position: top; /* what it does is to ensure that whatever the container(viewport) size is that this top of the image always stays at the top of the container.*/
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*we also could specify it as px or any other unit*/
-  position: relative;
-}
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  /* what cover does is that whatever the width of the viewport, or the element, it'll always try to fit the element inside of the box. */
+  background-position: top;
+  /* what it does is to ensure that whatever the container(viewport) size is that this top of the image always stays at the top of the container.*/
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*we also could specify it as px or any other unit*/
+  position: relative; }
 
-.header__logo-box{
+.header__logo-box {
   position: absolute;
   /* top: 40px;
   left: 40px; */
   top: 4rem;
-  left: 4rem;
-}
+  left: 4rem; }
 
-.header__logo{
- /* height: 35px; */ /*we don't have to specify the widht, the width with scale accordingly(the width automatically figured out by the browser) */
+.header__logo {
+  /* height: 35px; */
+  /*we don't have to specify the widht, the width with scale accordingly(the width automatically figured out by the browser) */
   /* We could instead also set the width and then the height would be figured out by the browser. */
-  height: 3.5em;
-}
+  height: 3.5em; }
 
 /* .logo:hover{
   animation: moveInRight 1s ease-out;
 } */
-
-.header__text-box{
+.header__text-box {
   position: absolute;
-  top: 40%; /* we use 40% so it looks more center, because the wedge(clip-path) make it look more down */
+  top: 40%;
+  /* we use 40% so it looks more center, because the wedge(clip-path) make it look more down */
   left: 50%;
   /* background-color: red; */
   transform: translate(-50%, -50%);
-  text-align: center;
-}
+  text-align: center; }
 
-.heading-primary{
+.heading-primary {
   color: #fff;
   text-transform: uppercase;
-  
   backface-visibility: hidden;
-  
   /* margin-bottom: 60px; */
-  margin-bottom: 6rem;
-}
+  margin-bottom: 6rem; }
 
-.heading-primary--main{
+.heading-primary--main {
   display: block;
   /* font-size: 60px; */
   font-size: 6rem;
   font-weight: 400;
   /* letter-spacing: 35px; */
   letter-spacing: 3.4rem;
-
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-
   /* 
   animation-delay: 3s; 
   animation-iteration-count: 3;
-  */
-  
-}
-/* two display block elements have no space between them */
+  */ }
 
-.heading-primary--sub{
+/* two display block elements have no space between them */
+.heading-primary--sub {
   display: block;
   /* font-size: 20px; */
   font-size: 2rem;
   font-weight: 700;
   /* letter-spacing: 17.4px; */
   letter-spacing: 1.75rem;
-
   /* animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
-  animation: moveInRight 1s ease-out;
-}
+  animation: moveInRight 1s ease-out; }
 
-@keyframes moveInLeft{
-  0%{
+@keyframes moveInLeft {
+  0% {
     opacity: 0;
     /* transform: translateX(-100px); */
-    transform: translateX(-10rem);
-  }
-  80%{
+    transform: translateX(-10rem); }
+  80% {
     /* transform: translateX(10px); */
-    transform: translateX(1rem);
-  }
-  100%{
+    transform: translateX(1rem); }
+  100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
-@keyframes moveInRight{
-  0%{
+@keyframes moveInRight {
+  0% {
     opacity: 0;
     /* transform: translateX(100px); */
-    transform: translateX(10rem);
-  } 
-  80%{
+    transform: translateX(10rem); }
+  80% {
     /* transform: translateX(-10px); */
-    transform: translateX(-1rem);
-  }
-  100%{
+    transform: translateX(-1rem); }
+  100% {
     opacity: 1;
     transform: translate(0);
     /* color: #ff0000;  */
-    /* the color red doesn't stays, its gone after the animation finishes(animation-duration) */
-  }
-}
+    /* the color red doesn't stays, its gone after the animation finishes(animation-duration) */ } }
 
-@keyframes moveInBottom{
-  0%{
+@keyframes moveInBottom {
+  0% {
     opacity: 0;
     /* transform: translateY(30px); */
-    transform: translateY(3em);
-  }
-  100%{
+    transform: translateY(3em); }
+  100% {
     opacity: 1;
     transform: translate(0);
     /* color: #ff0000;  */
-    /* the color red doesn't stays, its gone after the animation finishes(animation-duration) */
-  }
-}
+    /* the color red doesn't stays, its gone after the animation finishes(animation-duration) */ } }
 
 .btn:link,
-.btn:visited{
+.btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   /* padding: 15px 40px; */
   padding: 1.5rem 4rem;
   display: inline-block;
-  /*border-radius: 100px;*/ /*this will shape the edge, and we can put a really high number it will stay the same like 200px or even 500px*/
+  /*border-radius: 100px;*/
+  /*this will shape the edge, and we can put a really high number it will stay the same like 200px or even 500px*/
   border-radius: 10rem;
   transition: all .2s;
   position: relative;
-  font-size: 1.6rem;
-}
+  font-size: 1.6rem; }
 
-.btn:hover{
+.btn:hover {
   /* transform: translateY(-3px); */
-  transform: translateY(-.3em);
+  transform: translateY(-0.3em);
   /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-.btn:active{
-  /*transform: translateY(-1px);*/ /*this "-1px" is related to the initial state(.btn:link) not the :hover. so "-1px" from the normal position*/
-  transform: translate(-.1rem);
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
-  /* when it's active, we want the shadow to look smaller and so to give the impression that the button is closer to the page and so further away from the user.===> we decrease the x shadow to 5px and we want it less blured ===> we wanna make it look natural */
-}
+.btn:active {
+  /*transform: translateY(-1px);*/
+  /*this "-1px" is related to the initial state(.btn:link) not the :hover. so "-1px" from the normal position*/
+  transform: translate(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  /* when it's active, we want the shadow to look smaller and so to give the impression that the button is closer to the page and so further away from the user.===> we decrease the x shadow to 5px and we want it less blured ===> we wanna make it look natural */ }
 
-.btn--white{
+.btn--white {
   background-color: #fff;
-  color: #777;
-}
+  color: #777; }
 
-.btn::after{
+.btn::after {
   /*we want it to look the same as the button */
-  content:"";
-  display: inline-block; /* because the button that we have is an inline-block */
+  content: "";
+  display: inline-block;
+  /* because the button that we have is an inline-block */
   height: 100%;
   width: 100%;
   /* border-radius: 100px; */
@@ -210,24 +173,19 @@ body{
   top: 0;
   left: 0;
   z-index: -1;
-
   transition: all .4s;
-  /* we put the transition here because this is the initial state of ".btn:hover::after" */
-}
+  /* we put the transition here because this is the initial state of ".btn:hover::after" */ }
 
-.btn--white::after{
+.btn--white::after {
   content: "";
   background-color: #fff;
   /* background-color: red;  */
-  /* Now it's everything red But that's not a problem For some reason the original button is also getting red, But we still can be sure the pseudo-element is behind the button because we still can see the text, And so that means that the original button is still on top of the pseudo-element.*/
-}
+  /* Now it's everything red But that's not a problem For some reason the original button is also getting red, But we still can be sure the pseudo-element is behind the button because we still can see the text, And so that means that the original button is still on top of the pseudo-element.*/ }
 
-.btn:hover::after{
+.btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
+  opacity: 0; }
 
-.btn-animated{
+.btn-animated {
   animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards;
-}
+  animation-fill-mode: backwards; }
