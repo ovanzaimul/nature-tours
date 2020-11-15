@@ -2,6 +2,10 @@ $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
+$color-grey-dark: #777;
+$color-white: #fff;
+
+
 *,
 *::after,
 *::before{
@@ -21,7 +25,7 @@ body{
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7; /*means that it's 1.7 times bigger than the predefined line height, that we would have without this. */
-  color: #777;
+  color: $color-grey-dark;
   padding: 3em; /*this is not inheritance bcs padding not getting inherited*/
 
   box-sizing: border-box;
@@ -69,7 +73,7 @@ body{
 }
 
 .heading-primary{
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
   
   backface-visibility: hidden;
@@ -189,8 +193,8 @@ body{
 }
 
 .btn--white{
-  background-color: #fff;
-  color: #777;
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 
 .btn::after{
@@ -212,7 +216,7 @@ body{
 
 .btn--white::after{
   content: "";
-  background-color: #fff;
+  background-color: $color-white;
   /* background-color: red;  */
   /* Now it's everything red But that's not a problem For some reason the original button is also getting red, But we still can be sure the pseudo-element is behind the button because we still can see the text, And so that means that the original button is still on top of the pseudo-element.*/
 }
