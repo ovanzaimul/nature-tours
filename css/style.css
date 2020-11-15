@@ -31,66 +31,58 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /*we also could specify it as px or any other unit*/
   position: relative; }
-
-.header__logo-box {
-  position: absolute;
-  /* top: 40px;
-  left: 40px; */
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  /* height: 35px; */
-  /*we don't have to specify the widht, the width with scale accordingly(the width automatically figured out by the browser) */
-  /* We could instead also set the width and then the height would be figured out by the browser. */
-  height: 3.5em; }
-
-/* .logo:hover{
-  animation: moveInRight 1s ease-out;
-} */
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  /* we use 40% so it looks more center, because the wedge(clip-path) make it look more down */
-  left: 50%;
-  /* background-color: red; */
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    /* top: 40px;
+    left: 40px; */
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    /* height: 35px; */
+    /*we don't have to specify the widht, the width with scale accordingly(the width automatically figured out by the browser) */
+    /* We could instead also set the width and then the height would be figured out by the browser. */
+    height: 3.5em; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    /* we use 40% so it looks more center, because the wedge(clip-path) make it look more down */
+    left: 50%;
+    /* background-color: red; */
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   /* margin-bottom: 60px; */
-  margin-bottom: 6rem; }
-
-.heading-primary--main {
-  display: block;
-  /* font-size: 60px; */
-  font-size: 6rem;
-  font-weight: 400;
-  /* letter-spacing: 35px; */
-  letter-spacing: 3.4rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* 
-  animation-delay: 3s; 
-  animation-iteration-count: 3;
-  */ }
-
-/* two display block elements have no space between them */
-.heading-primary--sub {
-  display: block;
-  /* font-size: 20px; */
-  font-size: 2rem;
-  font-weight: 700;
-  /* letter-spacing: 17.4px; */
-  letter-spacing: 1.75rem;
-  /* animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out; */
-  animation: moveInRight 1s ease-out; }
+  margin-bottom: 6rem;
+  /* two display block elements have no space between them */ }
+  .heading-primary--main {
+    display: block;
+    /* font-size: 60px; */
+    font-size: 6rem;
+    font-weight: 400;
+    /* letter-spacing: 35px; */
+    letter-spacing: 3.4rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* 
+    animation-delay: 3s; 
+    animation-iteration-count: 3;
+    */ }
+  .heading-primary--sub {
+    display: block;
+    /* font-size: 20px; */
+    font-size: 2rem;
+    font-weight: 700;
+    /* letter-spacing: 17.4px; */
+    letter-spacing: 1.75rem;
+    /* animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; */
+    animation: moveInRight 1s ease-out; }
 
 @keyframes moveInLeft {
   0% {
@@ -129,8 +121,7 @@ body {
     /* color: #ff0000;  */
     /* the color red doesn't stays, its gone after the animation finishes(animation-duration) */ } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   /* padding: 15px 40px; */
@@ -146,8 +137,11 @@ body {
 .btn:hover {
   /* transform: translateY(-3px); */
   transform: translateY(-0.3em);
-  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+  /* box-shadow: 0 10px 20px rgba($color-black, 0.2); */
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   /*transform: translateY(-1px);*/
@@ -159,6 +153,11 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    content: "";
+    background-color: #fff;
+    /* background-color: red;  */
+    /* Now it's everything red But that's not a problem For some reason the original button is also getting red, But we still can be sure the pseudo-element is behind the button because we still can see the text, And so that means that the original button is still on top of the pseudo-element.*/ }
 
 .btn::after {
   /*we want it to look the same as the button */
@@ -175,16 +174,6 @@ body {
   z-index: -1;
   transition: all .4s;
   /* we put the transition here because this is the initial state of ".btn:hover::after" */ }
-
-.btn--white::after {
-  content: "";
-  background-color: #fff;
-  /* background-color: red;  */
-  /* Now it's everything red But that's not a problem For some reason the original button is also getting red, But we still can be sure the pseudo-element is behind the button because we still can see the text, And so that means that the original button is still on top of the pseudo-element.*/ }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
 
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
