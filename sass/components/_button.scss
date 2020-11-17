@@ -1,0 +1,75 @@
+.btn{
+  &:link,
+  &:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    /* padding: 15px 40px; */
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    /*border-radius: 100px;*/ /*this will shape the edge, and we can put a really high number it will stay the same like 200px or even 500px*/
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+  }
+
+
+  &:hover{
+    /* transform: translateY(-3px); */
+    transform: translateY(-.3em);
+    /* box-shadow: 0 10px 20px rgba($color-black, 0.2); */
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after{
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+
+
+  &:active{
+    /*transform: translateY(-1px);*/ /*this "-1px" is related to the initial state(.btn:link) not the :hover. so "-1px" from the normal position*/
+    transform: translate(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    /* when it's active, we want the shadow to look smaller and so to give the impression that the button is closer to the page and so further away from the user.===> we decrease the x shadow to 5px and we want it less blured ===> we wanna make it look natural */
+  }
+
+
+  &--white{
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after{
+      content: "";
+      background-color: $color-white;
+      /* background-color: red;  */
+      /* Now it's everything red But that's not a problem For some reason the original button is also getting red, But we still can be sure the pseudo-element is behind the button because we still can see the text, And so that means that the original button is still on top of the pseudo-element.*/
+    }
+  
+  }
+
+
+
+  &::after{
+    /*we want it to look the same as the button */
+    content:"";
+    display: inline-block; /* because the button that we have is an inline-block */
+    height: 100%;
+    width: 100%;
+    /* border-radius: 100px; */
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    transition: all .4s;
+    /* we put the transition here because this is the initial state of ".btn:hover::after" */
+  }
+
+  &--animated{
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+  }
+}

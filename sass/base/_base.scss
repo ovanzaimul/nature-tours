@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before{ //this is reset
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{ //we could move this to typography but
+  /* font-size: 10px; */
+  
+  //this define what 1rem is
+  font-size: 62.5%;
+}
+
+body{
+  box-sizing: border-box;
+  
+}
