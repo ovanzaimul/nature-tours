@@ -2,7 +2,7 @@
   height: 95vh;
   background-image: linear-gradient(
     to right bottom,
-  rgba($color-primary-light, 0.8), //not work in regular css
+  rgba($color-primary-light, 0.8),
   rgba($color-primary-dark, 0.8)),
     url("../img/hero.jpg");
   background-size: cover; /* what cover does is that whatever the width of the viewport, or the element, it'll always try to fit the element inside of the box. */
