@@ -7,6 +7,7 @@
     url("../img/hero.jpg");
   background-size: cover; /* what cover does is that whatever the width of the viewport, or the element, it'll always try to fit the element inside of the box. */
   background-position: top; /* what it does is to ensure that whatever the container(viewport) size is that this top of the image always stays at the top of the container.*/
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*we also could specify it as px or any other unit*/
   position: relative;
 
