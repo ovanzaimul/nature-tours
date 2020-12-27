@@ -16,6 +16,36 @@
 </head>
 
 <body>
+
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background"></div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link"><span>01</span>About Natours</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link"><span>02</span>Your benefits</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link"><span>03</span>Popular tours</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link"><span>04</span>Stories</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link"><span>05</span>Book now</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <header class="header">
 
         <div class="header__logo-box">
@@ -116,7 +146,7 @@
             </div>
         </section>
 
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Most Popular tours
@@ -152,7 +182,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$297</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                     </div>
@@ -187,7 +217,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$497</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                     </div>
@@ -221,7 +251,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$897</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                     </div>
@@ -342,6 +372,71 @@
 
 
     </main>
+
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <img src="img/logo-green-2x.png" alt="Full Logo" class="footer__logo">
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Company</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Contact Us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Carrers</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Privacy Policy</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built my <a href="#" class="footer__link">Ovan Zaimul</a> for his online course <a href="#"
+                        class="footer__link">Advance CSS and Sass</a>. Copyright &copy; by Ovan Zaimul. You 100% allowed
+                    to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A
+                    credit to the original outhor, Jonas Schmedtmann, is of course highly appreciated!
+                </p>
+            </div>
+
+        </div>
+
+
+    </footer>
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/nat-9.jpg" alt="tour photo" class="popup__img">
+                <img src="img/nat-9.jpg" alt="tour photo" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Start Booking Now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; please read these terms before
+                    booking</h3>
+                <p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eius
+                    molestias nam architecto sunt assumenda voluptates maiores ex similique fugiat, dolorem ducimus
+                    nulla hic consectetur, quae quaerat impedit doloremque sapiente? Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Voluptatibus nisi sunt iusto incidunt natus quisquam magnam amet
+                    excepturi pariatur at vero, nam eveniet consequuntur! Nobis odio iste accusantium doloremque
+                    dolorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, nam.</p>
+                <a href="#" class="btn btn--green">Book Now</a>
+            </div>
+        </div>
+    </div>
+
 
     <!-- <section class="grid-test">
 

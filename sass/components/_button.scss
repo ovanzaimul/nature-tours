@@ -34,7 +34,7 @@
 
 
   &:active,
-  &:focus{
+  &:focus{ //focus for the <butoon> element
     outline: none; //for the <button> element 
     /*transform: translateY(-1px);*/ /*this "-1px" is related to the initial state(.btn:link) not the :hover. so "-1px" from the normal position*/
     transform: translate(-.1rem);
